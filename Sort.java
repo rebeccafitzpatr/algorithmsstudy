@@ -75,5 +75,24 @@ public class Sort {
       return q;
     }
 
+    public static int quickSelect(int[] a, int k) {
+      int left = 0;
+      int right = a.length-1;
+
+      while(left < right) {
+        int q = partition(a, left, right);
+
+        if (q == k -1)  {
+          return a[q];
+        } else if (k - -1 < q) {
+          right = q - 1;
+        } else {
+          left = q + 1;
+        }
+      }
+
+      return a[left];
+    }
+
   }
 
