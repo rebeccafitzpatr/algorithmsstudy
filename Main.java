@@ -12,8 +12,11 @@ public class Main {
     
     
     //int[] sortedArray = selectionSort(randomArray);
-    int[] sortedArray = selectionSort(insertionSort(randomArray));
-    for (int number : sortedArray) {
+    //int[] sortedArray = insertionSort(randomArray);
+
+    Sort.quicksort(randomArray, 0, randomArray.length-1);
+
+    for (int number : randomArray) {
       System.out.println(number);
     }
     
